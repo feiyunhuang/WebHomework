@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更改个人信息</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <style type="text/css">
+        container {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <form class="form-inline" action="../php/changename.php" name="form" method="post">
+    <div class="form-group">
+        <label for="exampleInputName2">新的名字</label>
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="张三" name="name">
+    </div>
+<br>
+    <h4>新的自我描述:</h4>
+    <div class="form-group">
+        <textarea class="form-control" rows="3" cols="20"  placeholder="我是一个热爱摄影的人，欢迎大家和我做朋友" name="description"></textarea>
+    </div>
+        <br>
+        <br>
+    <button type="submit"  name="submit" class="btn btn-default">确认更改</button>
+</form>
+<br>
+    <br>
+    <a href="../php/personpage.php" ><button class="btn btn-sm btn-primary" type="button">返回</button> </a>
+
+</div>
+
+</body>
+</html>

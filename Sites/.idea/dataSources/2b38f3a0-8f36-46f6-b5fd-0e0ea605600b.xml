@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="picwalldb.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.7">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="activity"/>
+    <table id="7" parent="2" name="administrator"/>
+    <table id="8" parent="2" name="friend"/>
+    <table id="9" parent="2" name="personinfor"/>
+    <table id="10" parent="2" name="piclabel"/>
+    <table id="11" parent="2" name="pictures"/>
+    <table id="12" parent="2" name="post"/>
+    <table id="13" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="14" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <table id="15" parent="2" name="user"/>
+    <column id="16" parent="6" name="aid">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="6" name="aname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="18" parent="6" name="actuname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="19" parent="6">
+      <ColNames>aid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="7" name="aid">
+      <Position>1</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="21" parent="7" name="password">
+      <Position>2</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <index id="22" parent="7" name="sqlite_autoindex_administrator_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>aid</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="7">
+      <ColNames>aid</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_administrator_1</UnderlyingIndexName>
+    </key>
+    <column id="24" parent="8" name="activeuid">
+      <Position>1</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="25" parent="8" name="passiveuid">
+      <Position>2</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="26" parent="8" name="group">
+      <Position>3</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="27" parent="8" name="remark">
+      <Position>4</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="28" parent="9" name="uid">
+      <Position>1</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="29" parent="9" name="description">
+      <Position>2</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="30" parent="9" name="headpath">
+      <Position>3</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <index id="31" parent="9" name="sqlite_autoindex_personinfor_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="9">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_personinfor_1</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="10" name="pid">
+      <Position>1</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="34" parent="10" name="label">
+      <Position>2</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="35" parent="11" name="pid">
+      <Position>1</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="36" parent="11" name="pname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="11" name="pownerid">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="11" name="uploadtime">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="39" parent="11" name="path">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="40" parent="11" name="description">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="41" parent="11" name="album">
+      <Position>7</Position>
+      <DataType>VARCHAR|0</DataType>
+      <DefaultExpression>255</DefaultExpression>
+    </column>
+    <column id="42" parent="11" name="zan">
+      <Position>8</Position>
+      <DataType>INT|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="43" parent="11" name="sqlite_autoindex_pictures_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pid</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="11">
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_pictures_1</UnderlyingIndexName>
+    </key>
+    <column id="45" parent="12" name="postid">
+      <Position>1</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="46" parent="12" name="uid">
+      <Position>2</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="47" parent="12" name="postname">
+      <Position>3</Position>
+      <DataType>VARCHAR|0</DataType>
+    </column>
+    <column id="48" parent="12" name="releasetime">
+      <Position>4</Position>
+      <DataType>VARCHAR|0</DataType>
+    </column>
+    <column id="49" parent="12" name="lasttime">
+      <Position>5</Position>
+      <DataType>VARCHAR|0</DataType>
+    </column>
+    <column id="50" parent="12" name="lastid">
+      <Position>6</Position>
+      <DataType>INT|0</DataType>
+    </column>
+    <column id="51" parent="12" name="content">
+      <Position>7</Position>
+      <DataType>VARCHAR|0</DataType>
+    </column>
+    <index id="52" parent="12" name="sqlite_autoindex_post_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>postid</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="12">
+      <ColNames>postid</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_post_1</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="13" name="type">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="55" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="56" parent="13" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="57" parent="13" name="rootpage">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="58" parent="13" name="sql">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="59" parent="14" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="60" parent="14" name="seq">
+      <Position>2</Position>
+    </column>
+    <column id="61" parent="15" name="uid">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="15" name="uname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="63" parent="15" name="uemail">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="64" parent="15" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="65" parent="15">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

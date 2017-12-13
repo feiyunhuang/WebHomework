@@ -1,0 +1,25 @@
+<?php
+require_once('../php/login.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1> upload</h1>
+<div class="form-group">
+<form action="../php/handle.php" name="form" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" /><br/>
+    <div class="form-group">
+        <textarea class="form-control" rows="3"  placeholder="Type some description..." name="description"></textarea>
+    </div>
+    <input type="submit" name="submit" value="上传" />
+</form>
+</div>
+</body>
+</html>
